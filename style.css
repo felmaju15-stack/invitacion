@@ -1,0 +1,125 @@
+/* RESET */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --oro: #ffffff;
+    --negro: #000000;
+    --gris: #b3b3b3;
+}
+
+body {
+    background: var(--negro);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* FUENTES */
+.nombre-brittany {
+    font-family: 'Alex Brush', cursive;
+    font-size: 6rem;
+    color: white;
+    margin: -10px 0;
+}
+
+.titulo-xv {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    letter-spacing: 10px;
+}
+
+/* Títulos de las secciones con fuente cursiva */
+h3 { 
+    font-family: 'Alex Brush', cursive !important; 
+    font-size: 3.5rem; 
+    color: white; 
+    text-transform: none; 
+    margin-bottom: 35px; 
+    display: block;
+}
+
+/* Subtítulos o títulos internos */
+h4 { 
+    font-family: 'Cinzel', serif; 
+    font-size: 1.2rem;
+    letter-spacing: 3px; 
+    color: white; 
+    margin-bottom: 10px;
+}
+
+/* Estilo para los nombres de los padres (Fuente seria) */
+.nombre-padre {
+    font-family: 'Cinzel', serif !important;
+    font-size: 1.5rem !important;
+    letter-spacing: 4px !important;
+    text-transform: uppercase !important;
+    margin: 10px 0 !important;
+}
+
+/* OVERLAY DE BIENVENIDA */
+#overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 9999; display: flex; align-items: center; justify-content: center;
+    background: black; transition: opacity 0.8s;
+}
+.overlay-bg {
+    position: absolute; width: 100%; height: 100%;
+    background-size: cover; background-position: center;
+    filter: brightness(30%) blur(5px);
+}
+.overlay-content {
+    position: relative; z-index: 10000;
+    background: white; padding: 40px 20px;
+    width: 85%; max-width: 350px; border-radius: 10px;
+}
+.overlay-content h1 { color: black; font-size: 1.3rem; margin-bottom: 25px; font-weight: 600; }
+#btn-ingresar {
+    background: var(--gris); border: none; color: white;
+    padding: 15px 45px; border-radius: 30px; cursor: pointer;
+    font-family: 'Cinzel', serif; font-size: 1rem;
+}
+
+/* PORTADA PRINCIPAL */
+.hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; }
+.hero-img { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: -1; }
+.fecha-container { border-top: 1px solid white; border-bottom: 1px solid white; padding: 10px 25px; margin: 35px 0 15px 0; font-family: 'Cinzel'; font-size: 1.3rem; }
+
+/* CONTADOR HORIZONTAL */
+.countdown-horizontal { display: flex; justify-content: center; gap: 15px; margin-top: 20px; font-family: 'Cinzel'; }
+.countdown-item { display: flex; flex-direction: column; min-width: 60px; }
+.countdown-item span { font-size: 1.5rem; font-weight: bold; }
+.countdown-label { font-size: 0.6rem; opacity: 0.8; text-transform: uppercase; }
+
+/* SECCIONES */
+section { padding: 60px 20px; position: relative; }
+.with-bg {
+    /* CORREGIDO: Se quitó assets/ para GitHub */
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('fondo.jpg');
+    background-size: cover; background-position: center;
+}
+.icon-anim { width: 70px; height: 70px; margin-bottom: 15px; border-radius: 50%; }
+.card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; margin-top: 20px; border: 1px solid rgba(255,255,255,0.1); }
+.img-salon { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+
+/* BOTONES ACCION */
+.btn-accion { display: inline-block; background: #333; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin-top: 15px; font-size: 0.9rem; border: none; cursor: pointer; }
+.btn-confirmar { display: inline-block; background: white; color: black; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: bold; font-family: 'Cinzel'; margin-top: 20px; }
+
+/* CARRUSEL */
+.slider { width: 100%; overflow: hidden; padding: 30px 0; }
+.slide-track { display: flex; width: calc(200px * 12); animation: scroll 20s linear infinite; }
+.slide { width: 200px; padding: 10px; }
+.slide img { width: 100%; border-radius: 10px; }
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-200px * 4)); } }
+
+/* FOOTER FINAL */
+.final-hero { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; }
+.final-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); }
+.final-content { position: relative; z-index: 2; }
+
+/* OTROS */
+#btn-musica-toggle { position: fixed; top: 15px; right: 15px; z-index: 9000; background: rgba(255,255,255,0.2); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; }
+.hidden { display: none; }
+.card-banco { margin-top: 15px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.9rem; }
+.separador { display: block; margin: 5px 0; font-size: 1.5rem; color: var(--oro); }

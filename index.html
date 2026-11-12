@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mis 15 Años - Mia</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Alex+Brush&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="btn-musica-toggle">||</button>
+
+    <div id="overlay">
+        <div class="overlay-bg" style="background-image: url('iconoboladisco.jpg');"></div>
+        <div class="overlay-content">
+            <h1>¡Estoy lista para brillar!</h1>
+            <button id="btn-ingresar">ingresar</button>
+        </div>
+    </div>
+
+    <audio id="musica" loop>
+        <source src="musica_corazon.mp3" type="audio/mpeg">
+    </audio>
+
+    <header class="hero">
+        <div class="hero-img" style="background-image: url('iconoboladisco.jpg');"></div>
+        <div class="hero-text">
+            <h2 class="titulo-xv" data-aos="fade-down">MIS XV</h2>
+            <h1 class="nombre-brittany" data-aos="zoom-in">Mia</h1>
+            <div class="fecha-container" data-aos="fade-up">
+                <span>04</span> | <span>DICIEMBRE</span> | <span>26</span>
+            </div>
+            <div id="countdown" class="countdown-horizontal" data-aos="fade-up"></div>
+        </div>
+    </header>
+
+    <!--<div class="slider">
+        <div class="slide-track">
+            <div class="slide"><img src="foto1.jpg"></div>
+            <div class="slide"><img src="foto2.jpg"></div>
+            <div class="slide"><img src="foto3.jpg"></div>
+            <div class="slide"><img src="foto4.jpg"></div>
+            <div class="slide"><img src="foto1.jpg"></div>
+            <div class="slide"><img src="foto2.jpg"></div>
+        </div>
+    </div> -->
+  <!-- SECCIÓN DE VIDEO EN REEMPLAZO DEL CARRUSEL -->
+<section class="seccion-video" style="text-align: center; background: #000; padding: 40px 0;">
+    <video autoplay loop muted playsinline class="video-invitacion" style="width: 100%; max-width: 600px; border-radius: 10px; display: block; margin: 0 auto;">
+        <source src="video_ejemplo.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+    </video>
+</section>
+
+
+    <section class="seccion-info with-bg">
+        <img src="iconofi.jpg" class="icon-anim" data-aos="zoom-in">
+        <h3>¿Dónde y Cuándo?</h3>
+        <div class="card" data-aos="fade-up">
+            <h4>Jano's Ramos Boutique 1</h4>
+            <img src="evento.jpg" class="img-salon">
+            <p>04 de Diciembre, 2026 - 21:30 hs.</p>
+            <a href="https://maps.app.goo.gl/effdYoW3NnnDpoZBA?g_st=ac" target="_blank" class="btn-accion">Ver Ubicación</a>
+        </div>
+    </section>
+
+    <section class="seccion-info">
+        <p>  </p>
+        <div class="nombres-padres">
+            <h3 class="nombre-padre">Hay momentos que atesoraré en mi corazón por siempre, y éste será uno de ellos. Acompáñame a celebrar mis 15 años.</h3>
+            <span class="separador"></span>
+          <h3>Dress Code</h3>
+        <p>Evitar color NEGRO</p>
+        
+        </div>
+
+      <section class="seccion-info with-bg">
+        <img src="iconore.jpg" class="icon-anim" data-aos="zoom-in">
+        <h3>Regalos</h3>
+        <p>Mi mejor regalo es compartir esta noche mágica con vos. Pero si nace de tu corazón hacerme un presente, te agradecería un detalle que endulce mi futuro o me ayude a cumplir mis sueños..</p>
+        <button class="btn-accion" onclick="toggleRegalos()">Ver datos bancarios</button>
+        <div id="datos-banco" class="hidden">
+            <div class="card-banco">
+                <p>Alias: <strong>mia.franchi.mp</strong></p>
+                <p> Mia Francesca Roccella</p>
+                <p>Mercado Pago</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-info">
+        <img src="iconoins.jpg" class="icon-anim" data-aos="zoom-in">
+        <h3>Fotos </h3>
+        <p>Compartí las fotos de esta noche tan especial </p>
+        <a href="https://drive.google.com/drive/folders/1OZYGrEfPVi6su9wmfMDNixwGoyYo_MSQ" class="btn-accion">Compartir Fotos</a>
+    </section>
+
+      
+    </section>
+
+
+    <section class="seccion-info">
+        <img src="iconomu.jpg" class="icon-anim" data-aos="zoom-in">
+        <h3>Play List</h3>
+        <p>¿Qué música no puede faltar?</p>
+        <a href="https://forms.gle/Pnk8coTxzvrgy9yh8" class="btn-accion">Sugerir canción</a>
+    </section>
+
+    <section class="seccion-info with-bg">
+        <img src="iconome.jpg" class="icon-anim" data-aos="zoom-in">
+        <h3>Contame</h3>
+        <p>Queremos que disfrutes de esta noche al máximo. Si tienes alguna restricción alimentaria o requerimiento especial (celiaquía, vegetarismo, alergias), por favor háznoslo saber en el siguiente formulario </p>
+        <a href="https://forms.gle/AypyngD9nPZUv1Lx8" class="btn-accion">Enviar aviso</a>
+    </section>
+
+    <section class="confirmacion">
+        <h3>Confirmar Asistencia</h3>
+        <p>Por favor, confirma tu presencia antes del Martes 17 de Noviembre.</p>
+        <a href="https://wa.me/541127227164?text=Hola! Confirmo mi asistencia a tus 15." class="btn-confirmar">CONFIRMAR </a>
+    </section>
+
+    <footer class="final-hero">
+        <div class="hero-img" style="background-image: url('iconoboladisco.jpg');"></div>
+        <div class="final-overlay"></div>
+        <div class="final-content" data-aos="zoom-in">
+            <h1 class="nombre-brittany">Mia</h1>
+            <p>¡Te espero!</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
